@@ -107,10 +107,10 @@ section
 {
     width: 500px;
     height: 500px;
-    animation-name: rotate;
+    /* animation-name: rotate;
     animation-timing-function: linear;
     animation-duration: 2s; /* You can adjust the duration as needed */
-    animation-iteration-count: infinite; /* This makes the animation loop infinitely */
+    /* animation-iteration-count: infinite; This makes the animation loop infinitely */ 
 }
 
 .home-content h3
@@ -142,18 +142,6 @@ span
     }
 }
 
-@keyframes rotate
-{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    45%
-    {
-        transform: rotate(45deg);
-    }
-}
-
 .home-content h3
 {
     font-size: 2.5rem;
@@ -169,18 +157,6 @@ span
 span
 {
     color: var(--main-color);
-}
-
-@keyframes left-right
-{
-    from
-    {
-        transform: translateX(-300px);
-    }
-    to
-    {
-        transform: translateX(0);
-    }
 }
 
 @keyframes rotate
@@ -214,10 +190,10 @@ span
     font-weight: 700;
     margin-bottom: 2rem;
     line-height: 1.3;
-    animation-name: left-right;
+    /* animation-name: left-right;
     animation-duration: 0.7s;
     animation-timing-function: ease-in;
-    animation-iteration-count: 1;
+    animation-iteration-count: 1; */ 
     /* animation-direction: reverse; */    
 }
 
@@ -561,15 +537,6 @@ span
     color: var(--second-bg-color);
 }
 
-/* Base styles for larger screens */
-html {
-    font-size: 62.5%; /* 1rem = 10px */
-}
-
-body {
-    font-size: 1.6rem; /* 16px */
-}
-
 /* Media queries for responsiveness */
 @media (max-width: 1200px) 
 {
@@ -605,13 +572,19 @@ body {
     {
         padding: 6rem 2% 1rem;
     }
+
+    .portfolio
+    {
+        padding-bottom: 7rem;
+    }
+
     .footer
     {
         padding: 1.5rem 2%;
     }
     .home
     {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: flex ; /* Stack elements vertically */
         align-items: center;
     }
     .home-img img
@@ -633,6 +606,45 @@ body {
 
 @media (max-width: 768px) 
 {
+    #menu-icon
+    {
+        display: block;
+    }
+    .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, 0.518);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+
+    .navbar.active
+    {
+        display: block;
+    }
+
+    .navbar a
+    {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .portfolio h3
+    {
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     html
     {
         font-size: 45%;
