@@ -193,7 +193,7 @@ span
     /* animation-name: left-right;
     animation-duration: 0.7s;
     animation-timing-function: ease-in;
-    animation-iteration-count: 1; */ 
+    animation-iteration-count: 1; */
     /* animation-direction: reverse; */    
 }
 
@@ -294,6 +294,7 @@ span
 
 .about-content h3
 {
+    margin-top: 4rem;
     font-size: 2.6rem;
     color: bisque;
 }
@@ -301,7 +302,7 @@ span
 .about-content p
 {
     font-size: 1.8rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     text-align: justify;
 }
 
